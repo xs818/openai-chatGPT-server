@@ -1,0 +1,15 @@
+[server]
+name = "openai dev"
+port = 8090
+mode = "debug"
+
+[chatGPT]
+apiKey = "your api key"
+botDesc = "You are ChatGPT, a large language model trained by OpenAI."
+proxy = "http://127.0.0.1:7890"
+model = "gpt-3.5-turbo"
+maxTokens = 4096
+temperature = 0.9
+topP = 1
+frequencyPenalty = 0.0
+presencePenalty = 0.6
