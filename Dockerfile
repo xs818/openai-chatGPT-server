@@ -18,9 +18,9 @@ RUN mkdir -p /app/config \
 
 WORKDIR /app
 
-COPY --from=builder /app/openai /app/
+COPY --from=builder /app/openai-chatGPT-server /app/
 COPY --from=builder /app/config/dev_config.toml /app/config/
 
 EXPOSE 8090
 
-ENTRYPOINT /app/openai -env dev >> /app/logs/log.log 2>&1
+ENTRYPOINT /app/openai-chatGPT-server -env dev >> /app/logs/log.log 2>&1

@@ -78,6 +78,13 @@ docker run -d \
 
 `提示`： CHAT_PROXY中的`http://host.docker.internal`是指向宿主机的IP,端口需要改成自己的代理端口
 
+
+**测试**
+```shell
+curl -X POST -d '{"role": "user", "content": "hello"}' -H "Content-Type: application/json" http://127.0.0.1:8090/chat-room/stream 
+curl -X POST -d '{"role": "user", "content": "hello"}' -H "Content-Type: application/json" http://127.0.0.1:8090/chat-room 
+```
+
 ---
 ## 参数解释
 #### Temperature
